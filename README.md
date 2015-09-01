@@ -28,17 +28,17 @@ The following demonstrates the minimum config for the CloudWatch backend.
 
     {
         backends: [ "aws-cloudwatch-statsd-backend" ],
-        cloudwatch: 
+        cloudwatch:
         {
-            accessKeyId: 'YOUR_ACCESS_KEY_ID', 
-            secretAccessKey:'YOUR_SECRET_ACCESS_KEY', 
+            accessKeyId: 'YOUR_ACCESS_KEY_ID',
+            secretAccessKey:'YOUR_SECRET_ACCESS_KEY',
             region:"YOUR_REGION"
         }
     }
 
 The access keys can be you personal credentials to AWS but it is highly recommended to create an ad hoc user via Amazon's IAM service and use those credentials.
 
-The region is for example EU_WEST_1 or US_EAST_1.
+The region is for example eu-west-1 or us-east-1.
 
 The above will create a metric with the default namespace, AwsCloudWatchStatsdBackend, and send an http request to CloudWatch via awssum.
 
@@ -62,12 +62,12 @@ The following overrides the default and any provided namespace or metric name wi
 
     {
         backends: [ "aws-cloudwatch-statsd-backend" ],
-        cloudwatch: 
+        cloudwatch:
         {
-            accessKeyId: 'YOUR_ACCESS_KEY_ID', 
-            secretAccessKey: 'YOUR_SECRET_ACCESS_KEY', 
+            accessKeyId: 'YOUR_ACCESS_KEY_ID',
+            secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
             region: 'YOUR_REGION',
-            namespace: 'App/Controller/Action', 
+            namespace: 'App/Controller/Action',
             metricName: 'Request'
         }
     }
@@ -76,12 +76,12 @@ Using the option *processKeyForNamespace* (default is false) you can parse the b
 
     {
         backends: [ "aws-cloudwatch-statsd-backend" ],
-        cloudwatch: 
+        cloudwatch:
         {
-            accessKeyId: 'YOUR_ACCESS_KEY_ID', 
-            secretAccessKey: 'YOUR_SECRET_ACCESS_KEY', 
+            accessKeyId: 'YOUR_ACCESS_KEY_ID',
+            secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
             region: 'YOUR_REGION',
-            processKeyForNames:true
+            processKeyForNamespace:true
         }
     }
 
@@ -97,10 +97,10 @@ Using cloudwatch will incur a cost for each metric sent. In order to control you
 
     {
         backends: [ "aws-cloudwatch-statsd-backend" ],
-        cloudwatch: 
+        cloudwatch:
         {
-            accessKeyId: 'YOUR_ACCESS_KEY_ID', 
-            secretAccessKey: 'YOUR_SECRET_ACCESS_KEY', 
+            accessKeyId: 'YOUR_ACCESS_KEY_ID',
+            secretAccessKey: 'YOUR_SECRET_ACCESS_KEY',
             region: 'YOUR_REGION',
             whitelist: ['YOUR_FULL_METRIC_NAME']
         }
