@@ -5,7 +5,7 @@
         accessKeyId: process.env.AWS_ACCESS_KEY,
         secretAccessKey: process.env.AWS_SECRET_KEY,
         region: 'us-east-1',
-        whitelist: ['ASGMetrics.ThreadUtilization'],
+        whitelist: ['ASGMetrics.ThreadUtilization_._AutoScalingGroupName.web'],
         processKeyForNamespace: true
     }
 }
